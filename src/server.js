@@ -42,13 +42,15 @@ const server = http.createServer((req, res) => {
             .end(JSON.stringify(users))
     }
 
-    if (method === 'POST' && url === '/users') {
+    if (method === 'POST' && url === '/whatsapp') {
         users.push({
             id: 2,
             nome: "Jhon Doe",
             email: 'mariadoe@gmail.com'
         })
         
+        console.log(req)
+
         return res.writeHead(201).end()
     }
 
